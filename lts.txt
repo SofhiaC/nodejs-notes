@@ -1,0 +1,10 @@
+Versões de Suporte a Longo Prazo - Long Term Suport 
+
+Segundo a IA do site do node.js:
+"LTS stands for "Long-Term Support." In the context of Node.js, LTS versions are releases that receive critical bug fixes and security updates for an extended period, typically 30 months. This makes them suitable for production applications, as they provide stability and reliability over time.
+
+Major Node.js versions enter a "Current" release status for six months, during which library authors can add support for them. After six months, odd-numbered releases become unsupported, while even-numbered releases move to "Active LTS" status and are ready for general use.
+
+To find the most recent LTS version, you would typically check the official Node.js website or repository, as the context provided does not specify the latest version."
+
+Ou seja, são versões que oferecem um suporte a bugs críticos e também ameaças a segurança maior. Assim, as versões LTS são ideais para ambientes de produção, com maior estabilidade e apoio com o passar do tempo. 

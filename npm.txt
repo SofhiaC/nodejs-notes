@@ -1,0 +1,19 @@
+Node Package Manager
+*é open source 
+
+Diretamente do StackOverflow:
+"NPM is used to manage dependencies for packages. If you were to unpack a framework and use it outside NPM, you would have to do this every time you want to update the framework. NPM does this for you. You always know what version you're on, and you can limit a dependency to a specific major/minor/patch version."
+
+Além de cuidar das dependências como principal funcionalidade, o npm também pode criar algumas estruturas e organizações para um repositório. 
+
+Essa organização de dependências está diretamente relacionada ao arquivo "package.json". Assim, com base nesse arquivo, o próximo a mexer no projeto pode só dar o comando npm install e ter todas as dependências necessárias para rodar o projeto baixadas.
+
+CLI (Comand Line Interface):
+
+
+Comandos: 
+npm install 
+--> 
+
+
+
