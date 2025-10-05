@@ -1,10 +1,49 @@
-Versões de Suporte a Longo Prazo - Long Term Suport 
+Versões de Suporte a Longo Prazo - Long Term Suport (bom para ter ideias de ciclo de manutenção e segurança da tecnologia em uso)
 
 Segundo a IA do site do node.js:
+
 "LTS stands for "Long-Term Support." In the context of Node.js, LTS versions are releases that receive critical bug fixes and security updates for an extended period, typically 30 months. This makes them suitable for production applications, as they provide stability and reliability over time.
-
 Major Node.js versions enter a "Current" release status for six months, during which library authors can add support for them. After six months, odd-numbered releases become unsupported, while even-numbered releases move to "Active LTS" status and are ready for general use.
-
 To find the most recent LTS version, you would typically check the official Node.js website or repository, as the context provided does not specify the latest version."
 
 Ou seja, são versões que oferecem um suporte a bugs críticos e também ameaças a segurança maior. Assim, as versões LTS são ideais para ambientes de produção, com maior estabilidade e apoio com o passar do tempo. 
+
+O que acontece também com as versões é que os números pares são mais serguros, porque nas versões ímpares eles testam diferentes evoluções para o node. Além disso, há sempre um suporte de período correspondente a 30 meses até a próxima "versão segura".
+
+Quando faltam 12 meses para o suporte de uma versão LTS acabar, as empresas se preocupam com a migração e contam com a ajuda de:
+- nvm (Node Version Manager) → troca fácil de versões em ambientes locais e CI/CD.
+- Docker → imagens com versões específicas do Node.
+- CI/CD (Jenkins, GitHub Actions, etc.) → automatiza testes com múltiplas versões.
+- Dependabot / Renovate → mantém dependências atualizadas automaticamente.
+
+Quando uma empresa continua usando uma versão do Node.js fora do suporte (EOL — End of Life), ela perde:
+- Atualizações de segurança do próprio Node.js (vulnerabilidades em V8, OpenSSL, HTTP, etc);
+- Correções de bugs críticos;
+- Compatibilidade com pacotes npm novos (que exigem Node mais recente).
+
+Current (~6 meses): Recebe novidades e melhorias rápidas
+Active LTS	(18 meses):	Recebe atualizações de segurança e correções de bugs
+Maintenance	(12 meses):	Só recebe patches de segurança
+EOL - End of Life	(Após 30 meses):	Fim do suporte oficial (insegura para uso)
+
+Link para se manter atualizado: https://nodejs.org/en/about/previous-releases 
+
+Formas de se lidar com versões do node: 
+
+NVM - Node Version Manager
+→ comando para instalar: winget install CoreyButler.NVMforWindows
+ver versão/versões node instaladas: nvm ls ou nvm list
+ver versões do node possíveis de se instalar: node list available
+baixar versão especifica: nvm install 20 (vai baixar a 20.x mais recente) ou nvm instal 18.17.0 (instala especificamente)
+alternar versão sendo usada: nvm use 18
+remover versão: nwm uninstall 18
+ver versão atual do node: node -v
+ver versão atual do npm: npm -v
+
+NPM - Node Package Manager
+→ instalação global: npm install -g  pacote 
+→ instalação no projeto: npm install pacote
+
+Relação do NVM e NPM:
+O NVM baixa a versão node.js em toda máquina, assim é possível selecionar no projeto a versão do node a ser utilizada. Já o npm cuida dos pacotes/dependencias que podem ser vinvuladas a versão do node se instalada de forma global, ou então apenas dentro do projeto específico.
+*Para projetos, é comum criar um arquivo .nvmrc indicando a versão do Node que o projeto deve usar, garantindo consistência entre diferentes máquinas ou membros da equipe.
