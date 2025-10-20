@@ -1,5 +1,5 @@
-Node Package Manager
-*é open source 
+NPM - Node Package Manager
+*é opensource 
 
 Diretamente do StackOverflow:
 "NPM is used to manage dependencies for packages. If you were to unpack a framework and use it outside NPM, you would have to do this every time you want to update the framework. NPM does this for you. You always know what version you're on, and you can limit a dependency to a specific major/minor/patch version."
@@ -8,12 +8,77 @@ Além de cuidar das dependências como principal funcionalidade, o npm também p
 
 Essa organização de dependências está diretamente relacionada ao arquivo "package.json". Assim, com base nesse arquivo, o próximo a mexer no projeto pode só dar o comando npm install e ter todas as dependências necessárias para rodar o projeto baixadas.
 
-CLI (Comand Line Interface):
+Conceitos ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
 
+- O que é npm e Node.js (diferença entre Node, npm e npx)
+    Node.js 
+    --> Ambiente de execuçãao js fora do navegador, permite rodar código js diretamente no computador, o motos que roda JavaScript. 
+    npm (Node Package Manager)
+    --> Gerenciador de pacotes que vem junto com o Node.js, ele instala, atualiza e gerencia bibliotecas, frameworks e dependências.
+    npx (Node Package eXecute)
+    --> Ferramenta para executar pacotes npm sem precisarinstalá-los globalmente. Permite rodar comandos de pacotes diferentes. Ele é o executor de pacotes, bom para rodar ferramentas pontuais sem poluir o sistema com instalações globais.
 
-Comandos: 
-npm install 
---> 
+- O que é um pacote/package (estrutura de um pacote Node)
+    Um pacote é um conjunto de arquivos e código js que resilve algum problema específico ou adiciona um funcionalidade ao projeto. 
+    Pode ser uma biblioteca, ferramenta ou projeto. 
+    --> Estrutura do pacote 
+        meu-pacote/
+        ├── package.json
+        ├── index.js
+        └── README.md
 
+    wewewe
 
+- O que é o arquivo "package.json" e para que serve (dependências, scripts, metadados do projeto)
+    wewewe
 
+- O que é o arquivo "package-lock.json" (controle de versões exatass para reprodutibilidade)
+    wewewe
+
+Gerenciamento de dependências ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+--> instalação de pacotes: 
+    npm install <pacote>
+    npm install <pacote> --save-dev
+    npm install -g <pacote>
+--> remoção e atualização:
+    npm unistall <pacote> 
+    npm update <pacote>
+--> verificação e auditoria: 
+    npm list
+    npm outdated
+    npm audit fix
+--> SemVer (semantic versioning):
+    ^ ou ~
+
+npm scripts: 
+
+npm e execução direta: 
+- Diferença entre npm e npx
+- Como rodas pacotes sem instalá-los globalmente 
+- Por que isso é importante
+
+Configurações e cache: 
+- Onde ficam armazenados os pacotes (node_modules)
+- Como limpar o cache (npm cache clean --force)
+- Gerenciar múltiplas versões de Node usando NVM 
+
+Futuramente: 
+--> estrutura de um pacote publicável
+--> npm publish, npm unpublish
+--> uso de .npmignore
+--> versionamento com: npm version
+
+Boas práticas:
+- Nunca subir node_modules para repositório usando ".gitignore"
+- Sempre usar "npm ci" em ambientes de produção/ci
+- Revisar dependências desnecessárias
+- Atualizar pacotes de segurança "npm audit fix"
+
+Outros gerenciadores: 
+--> yarn e pnpm (diferenças básicas, performance, lockfiles, etc)
+
+Bônus: 
+--> Entender o papel do "node_modules resolver" (como o node encontra os módulos)
+--> configurar "scripts cross-platform" (cross-env)
+--> uso de "dotenv" para variáveis de ambiente
+--> integração com Docker e CI/CD (npm install no pipeline)

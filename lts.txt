@@ -46,4 +46,4 @@ NPM - Node Package Manager
 
 Relação do NVM e NPM:
 O NVM baixa a versão node.js em toda máquina, assim é possível selecionar no projeto a versão do node a ser utilizada. Já o npm cuida dos pacotes/dependencias que podem ser vinvuladas a versão do node se instalada de forma global, ou então apenas dentro do projeto específico.
-*Para projetos, é comum criar um arquivo .nvmrc indicando a versão do Node que o projeto deve usar, garantindo consistência entre diferentes máquinas ou membros da equipe.
+*Para projetos, é comum criar um arquivo ".nvmrc" indicando a versão do Node que o projeto deve usar, garantindo consistência entre diferentes máquinas ou membros da equipe.
