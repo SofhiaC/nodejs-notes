@@ -1,0 +1,22 @@
+Meios de entrada e formas do frontend executar diversas ações.
+
+Principais recursos de uma requisição HTTP:
+- método HTTP
+- url
+
+Quando o frontend faz uma requisição pro backend, o método e a url são conseguidas pelo req/request. 
+
+GET => buscar informação do backend 
+
+POST => criar uma informação/recurso
+
+PUT => editar ou atualizar um recurso, entidade por completo, muitos campos 
+
+PATCH => atualizar uma informação específica de um recurso no backend 
+
+DELETE => deletar um recurso no backend 
+
+É possível ter rotas com a mesma url e método direfentes, e cada uma é única. Porque o que define uma rota é justamente a junção do método com a url. Ex: GET /users != POST /users
+
+
+
