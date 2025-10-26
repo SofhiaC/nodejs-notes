@@ -1,0 +1,31 @@
+XP:
+--> "npm init -y" cria o package.json
+esse arquivo package.json vai, principalmente, guardar as informações das dependenciass futuramente 
+para rodar o server: node src/server.js ou node --watch src/server.js
+--> scripts automatizados no package.json:
+    "scripts":{
+        "blabla": "script que vc colocaria no terminal",
+        "dev": "node --watch src/server.js"
+    },
+    ----> "npm run dev" no terminal pra rodar o script
+
+--> não é possível acessar apis da web/browsr side dentro do node
+
+como diferenciar módulos terceiros dos múdulos internos do node? 
+
+--> req e res
+
+
+Aplicações Stateful e Satateless
+--> Stateful: sempre vai ter algum tipo de informação sendo guardada na memória e ela depende disso pra rodar adequadamente 
+
+--> Satateless: geralmente armazena em dispositivos externos (bd ou arquivos de texto), se a informação for parada, tudo se manterá adequado. 
+
+A resposta que é enviado pro front não pode ser um array:
+        The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Array
+Pode ser uma string, um buffer ou um Uint8Array.
+Então o array tem que ser convertido usando JSON (JavaScript Object Notation) para transitar dados entre diferentes aplicações. O JSON já é uma variável global do js usando: "JSON.stringify"
+
+Como que o frontend vai saber que o backend enviou uma resposta em JSON?
+--> cabeçalhos/headers (req/res); metadados, informações adicionais sobre como que o dado pode ser interpretado pelo frontend. Verificar headers mdn, dentro da documentação do próprio mozilla. 
+Existem cabeçalhos padrões de se usar em APIs. 
