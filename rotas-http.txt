@@ -20,3 +20,14 @@ DELETE => deletar um recurso no backend
 
 
 
+http status code: 
+--> após o front executar uma ação, existem códigos numéricos a serem enviados para o front pra comunicar se aquela requição deu certo ou seus problemas. 
+fonte para estudos em: mdn htttp status code
+100 => informativos, não dizem muita coisa, trazem informação ao front mas nada de sucesso ou erro
+200 => sucesso, devolvem especifiacmente 200 por padrão mas nao especifica o que está ok
+300 => redirect, rotas redirecionadas pois não existem mais (301 mudou permanentemente, 302 redirecionamento temporário, sempre de forma automática) 
+400 => algo foi informado de maneira errada/faltante pelo front para o back
+500 => backend está estragado (500, 502)
+
+ex: return res.writeHead(201).end() --> mensagem de sucesso após criação de algo (POST), retorno vazio 
+
