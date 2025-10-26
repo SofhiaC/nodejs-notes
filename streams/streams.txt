@@ -1,0 +1,28 @@
+Streams: funcionalidade que faz o node ser o que é hoje 
+
+todo o upload de algo deverá ser concluído para ai ser feita a inserção no banco de dados, supondo um post de csv de 1gb pro erp 
+
+o node recebe o upload e vai inserindo no banco de dados quase que simultaneamente, leitura e processamente paralelos 
+
+
+--> Readable Streams: leitura de informação aos poucos 
+
+--> Writable Streams: envio de informação aos poucos 
+
+req e res são streams no final das contas, não preciso pedir ou enviar todas as informações de uma vez, posso fazer isso aos poucos
+
+--> stdin e std out 
+stdin é tudo que o usuário digita no terminal, como diz o vscode:
+        The process.stdin property returns a stream connected tostdin (fd 0). It is a net.Socket (which is a Duplex stream) unless fd 0 refers to a file, in which case it is a Readable stream.
+
+    process.stdin //stream de leitura
+        .pipe(process.stdout) //stream de saida
+    --> tudo que recebo como entrada, eu encaminho através do pipe uma saida, conceito de duplex stream
+
+construção de strams do zero: 
+
+
+req e res são strams nativamente 
+    req.pipe 
+    res.pipe
+
