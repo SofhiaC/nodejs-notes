@@ -1,4 +1,5 @@
 //não é possível ler formatos primitivos na stream, então deve se trabalhar com o formato buffer, e o buffer não aceita números
+//essa é uma stream de escrita, processa dados e não lê
 
 import { Readable } from 'node:stream'
 import { buffer } from 'node:stream/consumers'
